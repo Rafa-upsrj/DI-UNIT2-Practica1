@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dfdcfd;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 48% 46%;
+    grid-template-areas:
+    "header"
+    "carousel"
+    "browse";
+}
+
+/* --------Header---------- */
+
+header{
+    grid-area: header;
+    border-bottom: 1px solid #e9e8f0;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+}
+
+
+header .search input{
+    border: none;
+}
+
+header .logo-container {
+    width: 50px;
+    height: 100%;
+    justify-self: center ;
+}
+header .logo-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar-container {
+    width: 30px;
+    height: 30px;
+    justify-self: end;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px 0px #a7a7a7;
+}
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+/* ----------- end Header-------- */
+
+/* -----------------------Card */
+.card{
+    min-width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+}
+
+.card .container-imgCard{
+    text-align: center;
+}
+
+.card .container-imgCard .libro{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card .container-atributosCard{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 30% 30%;
+    row-gap: 5px;
+    justify-items: stretch;
+    padding: 10px;
+}
+
+.card .container-atributosCard .titulo h3{
+    font-size: 12px;
+    font-weight: 400;
+}
+.card .container-atributosCard .titulo p{
+    font-size: 10px;
+    font-weight: 200;
+    margin-top: 5px;
+    color: #b2b2b2;
+}
+.card .container-atributosCard .estrellas{
+    font-size: 10px;
+}
+.card .container-atributosCard .avatars{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.card .container-atributosCard .avatars div{
+    margin-left: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* -----------------------End Card */
+
+
+
+
+/* --------------- Carousel */
+.container-carousel{
+    grid-area: carousel;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 100%;
+}
+.container-carousel .titulo-carousel{
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 40px;
+}
+.container-carousel .titulo-carousel h2{
+    font-size: 20px;
+}
+
+.container-carousel .carousel{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.container-carousel .carousel .card{
+    min-width: 500px;
+    height: 80%;
+    color: white;
+}
+.container-carousel .carousel .card .container-atributosCard .titulo p{
+    color: white;
+}
+.container-carousel .carousel .card .container-atributosCard  .estrellas i{
+    text-shadow: 0px 0px 5px rgba(255,255,255,1.75);;
+}
+.container-carousel .carousel .card.azul{
+    background: linear-gradient(to bottom, #6bd3f4, #ceeafd) ;
+}
+.container-carousel .carousel .card.morado{
+    background: linear-gradient(to bottom, #b9aff9, #dfdcfd) ;
+}
+.container-carousel .carousel .card.rosa{
+    background: linear-gradient(to bottom, #efaeb6, #f8d4d5) ;
+}
+/* --------------- End Carousel */
+.browse{
+    grid-area: browse;
+}
